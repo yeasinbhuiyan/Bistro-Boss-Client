@@ -18,11 +18,12 @@ import { Navigation } from "swiper";
 const Testimonials = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
 
     }, [])
+    console.log(reviews)
     return (
         <section className='my-20'>
             <SectionTitle
@@ -33,7 +34,7 @@ const Testimonials = () => {
 
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 {
-                    reviews.map(review => <SwiperSlide
+                    reviews.map(review =>  <SwiperSlide
 
                         key={review._id}
 
