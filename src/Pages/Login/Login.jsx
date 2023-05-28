@@ -99,7 +99,9 @@ const Login = () => {
                                 {/* <button className='btn btn-xs btn-outline mt-2' >Valided</button> */}
                             </div>
                             <div className="form-control mt-6">
-                                <input disabled={disabled} type="submit" value="Login" className="btn btn-primary" />
+                                {/* ToDo Captha Work  */}
+                                {/* disabled={disabled} */}
+                                <input  type="submit" value="Login" className="btn btn-primary" />
                             </div>
                         </form>
                         <div>
