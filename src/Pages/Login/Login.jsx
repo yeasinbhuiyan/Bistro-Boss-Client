@@ -4,6 +4,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
     // const captchaRef = useRef(null)
@@ -107,6 +108,7 @@ const Login = () => {
                         <div>
                             <p><small>New Here ? Please <Link to='/signup'>Sign Up</Link></small> </p>
                         </div>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
