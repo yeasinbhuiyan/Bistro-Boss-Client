@@ -39,7 +39,7 @@ const Login = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 })
-                navigate(from)
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 console.log(error.message)

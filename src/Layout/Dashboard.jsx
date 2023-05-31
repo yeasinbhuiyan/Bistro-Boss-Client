@@ -2,12 +2,14 @@ import { Helmet } from "react-helmet-async";
 import { FaBars, FaBook, FaBookmark, FaCalendarAlt, FaHome, FaShoppingCart, FaUser, FaUtensilSpoon, FaWallet } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     const [cart] = useCart()
 
     // TODO: 
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin()
 
     return (
 
@@ -19,9 +21,9 @@ const Dashboard = () => {
             </Helmet>
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    <Outlet></Outlet>
+                <div className="drawer-content ">
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                    <Outlet></Outlet>
 
                 </div>
                 <div className="drawer-side bg-[#D1A054]">
@@ -30,8 +32,8 @@ const Dashboard = () => {
                         {
                             isAdmin ? <>
                                 <li><NavLink to='/dashboard/home'><FaHome></FaHome> Admin Home</NavLink></li>
-                                <li><NavLink to='/dashboard/reservations'><FaUtensilSpoon></FaUtensilSpoon>Add Items </NavLink></li>
-                                <li><NavLink to='/dashboard/history'><FaWallet></FaWallet> Manage Items </NavLink></li>
+                                <li><NavLink to='/dashboard/addItem'><FaUtensilSpoon></FaUtensilSpoon>Add an Items </NavLink></li>
+                                <li><NavLink to='/dashboard/manageItems'><FaWallet></FaWallet> Manage Items </NavLink></li>
                                 <li><NavLink to='/dashboard/history'><FaBook></FaBook> Manage Bookings </NavLink></li>
                                 <li><NavLink to='/dashboard/allusers'><FaUser></FaUser> All Users </NavLink></li>
                            
