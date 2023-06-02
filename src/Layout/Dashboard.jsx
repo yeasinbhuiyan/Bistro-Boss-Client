@@ -7,6 +7,7 @@ import useAdmin from "../hooks/useAdmin";
 const Dashboard = () => {
     const [cart] = useCart()
 
+
     // TODO: 
     // const isAdmin = true;
     const [isAdmin] = useAdmin()
@@ -31,10 +32,10 @@ const Dashboard = () => {
                     <ul className="menu p-4 w-80  ">
                         {
                             isAdmin ? <>
-                                <li><NavLink to='/dashboard/home'><FaHome></FaHome> Admin Home</NavLink></li>
+                                <li><NavLink to='/dashboard/adminhome'><FaHome></FaHome> Admin Home</NavLink></li>
                                 <li><NavLink to='/dashboard/addItem'><FaUtensilSpoon></FaUtensilSpoon>Add an Items </NavLink></li>
                                 <li><NavLink to='/dashboard/manageItems'><FaWallet></FaWallet> Manage Items </NavLink></li>
-                                <li><NavLink to='/dashboard/history'><FaBook></FaBook> Manage Bookings </NavLink></li>
+                                <li><NavLink to='/dashboard/'><FaBook></FaBook> Manage Bookings </NavLink></li>
                                 <li><NavLink to='/dashboard/allusers'><FaUser></FaUser> All Users </NavLink></li>
                            
 
@@ -46,9 +47,9 @@ const Dashboard = () => {
 
                                 <>
 
-                                    <li><NavLink to='/dashboard/home'><FaHome></FaHome> User Home</NavLink></li>
-                                    <li><NavLink to='/dashboard/reservations'><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
-                                    <li><NavLink to='/dashboard/history'><FaWallet></FaWallet> Payment History</NavLink></li>
+                                    <li><NavLink to='/dashboard/userhome'><FaHome></FaHome> User Home</NavLink></li>
+                                    <li><NavLink to='/'><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
+                                    <li><NavLink to='/'><FaWallet></FaWallet> Payment History</NavLink></li>
                                     <li><NavLink to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>
 
                                         My Cart
