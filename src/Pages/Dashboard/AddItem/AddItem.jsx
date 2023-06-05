@@ -75,12 +75,12 @@ const AddItem = () => {
                         </label>
                         <select defaultValue="Pick One" {...register("category", { required: true })} className="select select-bordered">
                             <option disabled selected>Pick one</option>
-                            <option>Pizza</option>
-                            <option>Soup</option>
-                            <option>Salad</option>
-                            <option>Desi</option>
-                            <option>Dessert</option>
-                            <option>Drinks</option>
+                            <option>pizza</option>
+                            <option>soup</option>
+                            <option>salad</option>
+                            <option>desi</option>
+                            <option>dessert</option>
+                            <option>drinks</option>
                         </select>
 
                     </div>

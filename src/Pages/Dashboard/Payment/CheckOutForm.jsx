@@ -78,6 +78,7 @@ const CheckOutForm = ({ price, cart }) => {
 
         console.log('payment intent', paymentIntent)
         setProcessing(false)
+        
         if (paymentIntent.status === "succeeded") {
             setTransaction(paymentIntent.id)
             const transactionId = paymentIntent.id

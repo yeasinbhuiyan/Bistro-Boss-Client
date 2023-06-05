@@ -19,6 +19,7 @@ const AdminHome = () => {
         }
 
     })
+    
 
     const { data: chartData = [] } = useQuery({
         queryKey: ['chart-data'],
@@ -57,7 +58,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
     </text>
   );
 }
-    console.log(stats)
+    console.log(chartData)
     return (
 
         <div className='w-full p-10'>

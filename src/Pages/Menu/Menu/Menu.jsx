@@ -22,6 +22,7 @@ const Menu = () => {
     const pizza = menu.filter(item => item.category === 'pizza')
     const offered = menu.filter(item => item.category === 'offered')
 
+    console.log(salad)
 
     return (
         <div>

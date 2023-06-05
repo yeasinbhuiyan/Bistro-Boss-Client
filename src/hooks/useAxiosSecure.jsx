@@ -5,7 +5,7 @@ import { useEffect } from "react"
 import useAuth from "./useAuth"
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://bistro-boss-server-livid.vercel.app'
 })
 
 const useAxiosSecure = () => {
@@ -19,7 +19,7 @@ const useAxiosSecure = () => {
     useEffect(() => {
         axiosSecure.interceptors.request.use((config) => {
             const token = localStorage.getItem('access-token');
-            console.log(token)
+            // console.log(token)
             if (token) {
                 config.headers.Authorization = `Bearer ${token}`;
 

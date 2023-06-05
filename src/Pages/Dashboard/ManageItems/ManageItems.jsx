@@ -8,6 +8,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 const ManageItems = () => {
     const [menu , , refetch] = useMenu()
     const [axiosSecure ] = useAxiosSecure()
+    
     const handleDelete=(item)=>{
         Swal.fire({
             title: 'Are you sure?',

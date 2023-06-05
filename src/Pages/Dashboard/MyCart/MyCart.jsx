@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const MyCart = () => {
     const [cart , refetch] = useCart()
     const total = cart.reduce((sum, item) => item.price + sum, 0)
-    const hadnleDelete = (item) => {
+    const handleDelete = (item) => {
 
 
         Swal.fire({
@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://bistro-boss-server-livid.vercel.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -94,7 +94,7 @@ const MyCart = () => {
                                 </td>
                                 <td>${item.price}</td>
                                 <td>
-                                    <button onClick={() => hadnleDelete(item)} className="btn btn-ghost btn-xs text-white hover:text-black bg-red-600"><FaTrashAlt ></FaTrashAlt></button>
+                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost btn-xs text-white hover:text-black bg-red-600"><FaTrashAlt ></FaTrashAlt></button>
                                 </td>
 
 
